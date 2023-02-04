@@ -11,7 +11,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         try:
             url = "localhost"  # TODO: Update with appropriate MongoDB connection information
             client = pymongo.MongoClient(url)
-            database = client['azure']
+            database = client['proj-2-database']
             collection = database['advertisements']
             
             filter_query = {'_id': ObjectId(id)}
